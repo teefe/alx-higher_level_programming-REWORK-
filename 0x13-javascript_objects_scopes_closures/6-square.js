@@ -7,15 +7,18 @@ class Square extends Square5 {
     }
 
     charPrint(C){
-        for (let i = 0; i < this.size; i++){
-            let row = "";
-            for (let j = 0; j < this.size; j++){
-                row += C;
+        if (C == undefined){
+            this.print();
+        }else{
+            for (let i = 0; i < this.height; i++){
+                let row = "";
+                for (let j = 0; j < this.height; j++){
+                    row += "C";
+                }
+                console.log(row);
             }
-            console.log(row);
         }
     }
-    
 }
 
 module.exports = Square;
